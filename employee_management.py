@@ -1,10 +1,10 @@
 import mysql.connector 
 conn= mysql.connector.connect(host="localhost",username="root",password="root2003",database="company_db")
-cur=conn.cursor()   #cursor object use chythe myql kk query cheyyuan pattuoll
+cur=conn.cursor()   
 print("connection created")
 
-# cur.execute("create table employee_cp(emp_id int auto_increment primary key,name varchar(30),department varchar(30),salary decimal(10,2))")
-# print("table created")
+cur.execute("create table employee_cp(emp_id int auto_increment primary key,name varchar(30),department varchar(30),salary decimal(10,2))")
+print("table created")
 
 print("1.Add employee")
 print("2.View all employee")
